@@ -14,9 +14,17 @@ namespace DemoSharpGitProject
         [Test]
         public void Test1()
         {
-            Console.WriteLine("Sample Test Execution");
+            Console.WriteLine($"Sample Test Execution {TestContext.CurrentContext.Test.Name}");
             Assert.Pass();
         }
+
+        [Test]
+        public void Test2()
+        {
+            Console.WriteLine($"Sample Test Execution {TestContext.CurrentContext.Test.Name}");
+            Assert.Pass();
+        }
+
 
         [TearDown]
         public void TearDown()
